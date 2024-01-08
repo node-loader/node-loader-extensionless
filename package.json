@@ -1,0 +1,58 @@
+{
+  "name": "@node-loader/extensionless",
+  "version": "1.0.0",
+  "description": "A nodejs loader for extensionless import statements",
+  "type": "module",
+  "exports": {
+    ".": "./lib/node-loader-extensionless.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "cross-env node --loader ./lib/node-loader-extensionless.js ./test/run-tests.js",
+    "lint": "eslint .",
+    "check-format": "prettier --check .",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "packageManager": "pnpm@>=8",
+  "keywords": [
+    "node",
+    "loader",
+    "typescript",
+    "js",
+    "extensions",
+    "file"
+  ],
+  "author": "Joel Denning",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-loader/node-loader-extensionless.git"
+  },
+  "bugs": {
+    "url": "https://github.com/node-loader/node-loader-extensionless/issues"
+  },
+  "homepage": "https://github.com/node-loader/node-loader-extensionless#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-node-important-stuff": "^2.0.0",
+    "husky": "^8.0.3",
+    "left-pad": "^1.3.0",
+    "lint-staged": "^15.2.0",
+    "mocha": "^10.2.0",
+    "prettier": "^3.1.1",
+    "pretty-quick": "^3.1.3"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}

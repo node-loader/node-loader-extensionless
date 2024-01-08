@@ -1,0 +1,7 @@
+{
+  "extends": "node-important-stuff",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  }
+}
