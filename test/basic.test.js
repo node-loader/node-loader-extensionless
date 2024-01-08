@@ -10,4 +10,9 @@ describe("basic usage", () => {
     // No .js should be added to this import specifier
     await import("left-pad");
   });
+
+  it(`Doesn't add .js to scoped npm packages`, async () => {
+    // No .js should be added to this import specifier
+    await import("@baseplate-sdk/utils");
+  });
 });
