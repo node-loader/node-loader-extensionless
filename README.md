@@ -1,6 +1,8 @@
 # node-loader-extensionless
 
-A node loader that auto-appends .js extensions to imports
+A node loader that auto-appends .js or .ts extensions to imports, based on the parentURL.
+
+When paired with [@node-loader/babel](https://github.com/node-loader/node-loader-babel) loader allows for loading typescript via NodeJS loaders
 
 ## Installation
 
