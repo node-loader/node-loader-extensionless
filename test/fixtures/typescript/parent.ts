@@ -1,3 +1,3 @@
-export { val1 } from './child'
+export { val1 } from "./child";
 
 export default "parent module";
