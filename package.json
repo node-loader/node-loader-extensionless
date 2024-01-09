@@ -10,7 +10,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "cross-env node --loader ./lib/node-loader-extensionless.js ./test/run-tests.js",
+    "test": "cross-env node --import=./test/register.js ./test/run-tests.js",
     "lint": "eslint .",
     "check-format": "prettier --check .",
     "prepare": "husky install"
@@ -41,7 +41,10 @@
     "access": "public"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-typescript": "^7.23.3",
     "@baseplate-sdk/utils": "^3.2.1",
+    "@node-loader/babel": "^2.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "eslint-config-node-important-stuff": "^2.0.0",
@@ -54,6 +57,6 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.{js,css,md,yml,eslintrc}": "prettier --write"
+    "*.{js,css,md,yml,eslintrc,ts,tsx,json}": "prettier --write"
   }
 }
