@@ -15,4 +15,11 @@ describe("basic usage", () => {
     // No .js should be added to this import specifier
     await import("@baseplate-sdk/utils");
   });
+
+  it(`Adds extensions to ../ imports`, async () => {
+    // Parent has a ../ import in it
+    const parent = await import("./fixtures/parent/parent.js");
+    assert.equal(parent.default, "parent");
+    assert.equal(parent.val1, "val1");
+  });
 });
